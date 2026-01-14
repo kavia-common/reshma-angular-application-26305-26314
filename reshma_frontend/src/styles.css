@@ -10,3 +10,12 @@ html, body {
   background-color: #ffffff;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
+
+/* Ensure Material dialogs/backdrops overlay the whole viewport cleanly. */
+.cdk-overlay-container, .cdk-global-overlay-wrapper {
+  pointer-events: none;
+}
+
+.cdk-overlay-pane, .cdk-overlay-backdrop {
+  pointer-events: auto;
+}

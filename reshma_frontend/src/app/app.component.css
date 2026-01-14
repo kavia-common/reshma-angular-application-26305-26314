@@ -1,16 +1,25 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.page {
   min-height: 100vh;
-  background-color: #ffffff;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+  padding: 24px;
 }
 
-h1 {
-  color: #1976d2;
-  font-size: 3rem;
-  font-weight: 500;
-  margin: 0;
-  text-align: center;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+.open-modal {
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-weight: 700;
+}
+
+/* Dark fullscreen backdrop */
+:global(.login-backdrop) {
+  background: rgba(10, 10, 10, 0.92);
+}
+
+/* Remove default dialog container padding so our card controls spacing */
+:global(.login-panel .mat-mdc-dialog-container) {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
 }

@@ -1,0 +1,40 @@
+<div class="login-modal" role="dialog" [attr.aria-label]="ariaLabel">
+  <button
+    class="close-button"
+    mat-icon-button
+    type="button"
+    (click)="close()"
+    aria-label="Close login modal"
+  >
+    <mat-icon aria-hidden="true">close</mat-icon>
+  </button>
+
+  <mat-card class="card" role="document">
+    <div class="logo" aria-label="Company logo">
+      <!-- UI-only placeholder logo mark (no asset provided in task). -->
+      <div class="logo-mark" aria-hidden="true">R</div>
+      <div class="logo-text" aria-hidden="true">reshma</div>
+    </div>
+
+    <div class="actions" role="group" aria-label="Login methods">
+      <button
+        class="login-button"
+        mat-raised-button
+        type="button"
+        (click)="onLoginUsernamePassword()"
+      >
+        Login with Username/Password
+      </button>
+
+      <button
+        class="login-button"
+        mat-raised-button
+        type="button"
+        (click)="onLoginSSO()"
+      >
+        <span class="btn-label">Login with SSO</span>
+        <mat-icon class="info-icon" aria-hidden="true">info</mat-icon>
+      </button>
+    </div>
+  </mat-card>
+</div>
